@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px solid #ccc;
+	padding: 5px;
+	background-color: #ddd;
+}
+
+td {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+.right {
+	text-align: right;
+}
+
+.red {
+	color: red;
+}
+
+a {
+	margin: 10px 10px;
+	padding: 3px 10px;
+	text-underline-offset: 0.6ex;
+}
+
+a:hover {
+	border-radius: 5px;
+	background-color: #eee;
+	text-decoration: none;
+}
+
+a:visited {
+	color: blue;
+}

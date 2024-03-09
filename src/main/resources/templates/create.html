@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>商品登録</title>
+</head>
+<body>
+    <h1>商品登録</h1>
+
+    <form th:action="@{/create}" method="post" th:object="${itemForm}">
+        <table>
+            <tr>
+                <th>商品名</th>
+                <td>
+                    <input type="text" name="name" th:value="*{name}">
+                    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:errorclass="red"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>価格</th>
+                <td>
+                    <input type="text" name="price" th:value="*{price}">
+                    <div th:if="${#fields.hasErrors('price')}" th:errors="*{price}" th:errorclass="red"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>在庫数</th>
+                <td>
+                    <input type="text" name="stockQuantity" th:value="*{stockQuantity}">
+                    <div th:if="${#fields.hasErrors('stockQuantity')}" th:errors="*{stockQuantity}" th:errorclass="red"></div>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <button>登録</button>
+            <a th:href="@{/cancel}">キャンセル</a>
+        </p>
+    </form>
+</body>
+</html>
